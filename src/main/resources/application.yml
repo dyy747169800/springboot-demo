@@ -7,6 +7,10 @@ spring:
 #      enabled: false
 #  jms:
 #    pub-sub-domain: true
+  redis:
+    host: 192.168.26.128
+    port: 6379
+    password: root
 ##############################
 
 
@@ -25,19 +29,14 @@ logging:
   path: d:/springbootlog/logs/
 ###########################
 
-
-##########redis############
-  redis:
-    host: 192.168.26.128
-    port: 6379
-    password: root
-###########################
-
 #############tomcat########
 server:
   port: 80 #端口
   context-path: / #部署路径
   session:
     timeout: 60000
+management:
+  security:
+    enabled: false
 ###########################
 
